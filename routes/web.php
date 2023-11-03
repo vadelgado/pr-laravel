@@ -33,6 +33,12 @@ Route::get('/dashboard', [HomeController::class,'index']
 Route::get('/facultades/listado', [Facultades::class,'index']
 )->middleware(['auth', 'verified'])->name('facultades_listado');
 
+Route::get('/facultades/registrar', [Facultades::class, 'form_registro']
+)->middleware(['auth', 'verified'])->name('form_registro_facultad');
+
+Route::post('/facultades/registrar', [Facultades::class, 'registrar']
+)->middleware(['auth', 'verified'])->name('registrar_facultad');
+
 //Rutas Programas
 Route::get('/programas/listado', [Programas::class,'index']
 )->middleware(['auth', 'verified'])->name('programas_listado');

@@ -13,7 +13,7 @@
 
                 <div class="card-header d-flex align-items-center justify-content-between">
                     <h3 class="card-title text-center mb-0">Tabla de Facultades</h3>
-                    <a href="#" class="btn btn-success ml-auto"><i class="fas fa-plus"></i> Registrar</a>
+                    <a href="{{route('form_registro_facultad')}}" class="btn btn-success ml-auto"><i class="fas fa-plus"></i> Registrar</a>
                 </div>
 
                 <!-- /.card-header -->
@@ -28,33 +28,17 @@
                             </tr>
                         </thead>
                         <tbody>
-                            <tr>
-                                <td>1</td>
-                                <td>COD001</td>
-                                <td>Facultad de Ingeniería</td>
-                                <td>
-                                    <button href="#" class="btn btn-primary"><i class="fas fa-edit"></i></button>
-                                    <button href="#" class="btn btn-danger"><i class="fas fa-trash"></i></button>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>2</td>
-                                <td>COD002</td>
-                                <td>Facultad de Ciencias Empresariales</td>
-                                <td>
-                                    <a href="#" class="btn btn-primary"><i class="fas fa-edit"></i></a>
-                                    <a href="#" class="btn btn-danger"><i class="fas fa-trash"></i></a>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>3</td>
-                                <td>COD003</td>
-                                <td>Facultad de Ciencias de la Salud</td>
-                                <td>
-                                    <a href="#" class="btn btn-primary"><i class="fas fa-edit"></i></a>
-                                    <a href="#" class="btn btn-danger"><i class="fas fa-trash"></i></a>
-                                </td>
-                            </tr>
+                            @foreach ($faculty as $index => $f)
+                                <tr>
+                                    <td>{{ $index + 1 }}</td>
+                                    <td>{{ $f->codfacultad }}</td>
+                                    <td>{{ $f->nomfacultad }}</td>
+                                    <td>
+                                        <button href="#" class="btn btn-primary"><i class="fas fa-edit"></i></button>
+                                        <button href="#" class="btn btn-danger"><i class="fas fa-trash"></i></button>
+                                    </td>
+                                </tr>
+                            @endforeach
                         </tbody>
                     </table>
                 </div>

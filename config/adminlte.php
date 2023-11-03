@@ -315,27 +315,27 @@ return [
         [
             'text' => 'Facultades',
             'url'  => '/facultades/listado',
-            'icon' => 'fas fa-fw fa-user',
+            'icon' => 'fas fa-magnet',
         ],
         [
             'text' => 'Programas',
             'url'  => '/programas/listado',
-            'icon' => 'fas fa-fw fa-lock',
+            'icon' => 'fas fa-university',
         ],
         [
             'text' => 'Docentes',
             'url'  => '/docentes/listado',
-            'icon' => 'fas fa-fw fa-lock',
+            'icon' => 'fas fa-chalkboard-teacher',
         ],
         [
             'text' => 'Estudiantes',
             'url'  => '/estudiantes/listado',
-            'icon' => 'fas fa-fw fa-lock',
+            'icon' => 'fas fa-user-graduate',
         ],
         [
             'text' => 'Materias',
             'url'  => '/materias/listado',
-            'icon' => 'fas fa-fw fa-lock',
+            'icon' => 'fas fa-brain',
         ],/*
         [
             'text'    => 'multilevel',
