@@ -13,7 +13,7 @@
 
                 <div class="card-header d-flex align-items-center justify-content-between">
                     <h3 class="card-title text-center mb-0">Tabla de Programas</h3>
-                    <a href="#" class="btn btn-success ml-auto"><i class="fas fa-plus"></i> Registrar</a>
+                    <a href="{{route('form_registro_programa')}}" class="btn btn-success ml-auto"><i class="fas fa-plus"></i> Registrar</a>
                 </div>
 
                 <!-- /.card-header -->

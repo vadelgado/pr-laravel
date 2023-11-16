@@ -19,7 +19,7 @@ class Facultades extends Controller
     {
         return view('facultades.form_registro');
     }
-
+ 
     public function registrar(Request $request)
     {
         $facultad = new Faculty();

@@ -43,6 +43,9 @@ Route::post('/facultades/registrar', [Facultades::class, 'registrar']
 Route::get('/programas/listado', [Programas::class,'index']
 )->middleware(['auth', 'verified'])->name('programas_listado');
 
+Route::match(['get', 'post'], '/programas/registrar', [Programas::class, 'form_registrar'])
+->middleware(['auth','verified'])->name('form_registro_programa');
+
 //Rutas Docentes
 Route::get('/docentes/listado', [Docentes::class,'index']
 )->middleware(['auth', 'verified'])->name('docentes_listado');
